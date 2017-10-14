@@ -1,0 +1,47 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+.header
+{
+	padding: 15px;
+	display: flex;
+	align-items: stretch;
+}
+
+.header .logo-image
+{
+	flex: 1;
+}
+
+.header .auth-group-button
+{
+	display: flex;
+	align-items: center;
+}
+
+.header button
+{
+	border-radius: 5px;
+	color: white;
+	border: 0px;
+	padding: 10px 20px;
+	background-color: #CD1F25;
+	margin: 0px 5px;
+}
+
+@media screen and (max-width: 900px)
+{
+	.header
+	{
+		flex-direction: column;
+	}
+
+	.header .auth-group-button
+	{
+		margin-top: 40px;
+		justify-content: center;
+	}
+}
