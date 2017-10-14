@@ -1,7 +1,10 @@
 *
 {
+	font-family: "Roboto";
 	margin: 0;
 	padding: 0;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 .header
@@ -30,6 +33,61 @@
 	padding: 10px 20px;
 	background-color: #CD1F25;
 	margin: 0px 5px;
+}
+
+.nav
+{
+	background-color: #383838;	
+	color: white;
+	border-radius: 5px;
+}
+
+.nav ul
+{
+	display: flex;
+}
+
+.nav ul > li 
+{
+	list-style-type: none;
+	padding: 10px 15px;
+	position: relative;
+}
+
+.nav ul > li:first-child
+{
+	border-radius: 5px;
+}
+
+.nav ul > li:hover
+{
+	background-color: #CD1F25;
+	cursor: pointer;
+}
+
+.nav ul > li > ul
+{
+	display: none;
+	background-color: #383838;
+	position: absolute;
+	left: 0px;
+	top: 100%;
+	max-width: none;
+}
+
+.nav ul > li:hover > ul
+{
+	display: flex;
+	flex-direction: column;
+}
+
+@font-face
+{
+	/** 
+	 * Enable this when production and disable font-family at line #3 
+	 */
+
+	/*src: url("https://fonts.googleapis.com/css?family=Roboto");*/
 }
 
 @media screen and (max-width: 900px)
