@@ -253,6 +253,27 @@ button
 	transform: translateY(-30px);
 }
 
+.about-us-container
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-us-container .about-us-main-image
+{
+	width: 350px;
+	height: 350px;
+}
+
+.about-us-container p
+{
+	margin-top: 15px;
+	width: 75%;
+	text-align: center;
+	color: #383838;
+}
 .footer
 {
 	display: flex;
