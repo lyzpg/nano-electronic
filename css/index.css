@@ -34,14 +34,27 @@ button
 	background-color: #CD1F25;
 }
 
+button:hover
+{
+	cursor: pointer;
+}
+
 .header button
 {
 	margin: 0px 5px;
 }
 
-.header button:hover
+.header > .auth-group-button > button
 {
-	cursor: pointer;
+	padding: 0;
+}
+
+.header > .auth-group-button > button > a
+{
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	padding: 10px 20px;
 }
 
 .nav

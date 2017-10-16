@@ -1,0 +1,69 @@
+.main-container
+{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.main-container > .login-box
+{
+	position: absolute;
+	top: 15vh;
+	width: 35vw;
+	height: 50vh;
+	border-radius: 5px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	padding: 32px;
+}
+
+.login-box > input
+{
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #8B8787;
+	color: #8B8787;
+	padding: 6px 6px;
+}
+
+.login-box > h4
+{
+	margin-top: 7.5px;
+	margin-bottom: 3px;
+	color: #8B8787;
+}
+
+.login-box > button
+{
+	position: absolute;
+	bottom: 32px;
+	margin-top: 15px;
+}
+
+.login-box > h1
+{
+	margin-bottom: 10px;
+}
+
+footer
+{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+
+@media screen and (max-width: 900px)
+{
+	.main-container > .login-box
+	{
+		width: 100vw;
+		box-shadow: 0px 0px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		padding: 42px;
+	}
+
+	.main-container > .login-box > button
+	{
+		transform: translateY(-30px);
+	}
+}
