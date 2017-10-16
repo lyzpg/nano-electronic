@@ -10,3 +10,4 @@ Nano Electronic will bring you the best shopping experience on internet.
 * `about_us.html` - More about **Nano Electronic**
 * `login.html` - Login page for existing customers
 * `register.html` - Register page for new customers
+* `master_*.html` - Partials included in other files
