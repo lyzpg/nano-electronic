@@ -25,14 +25,23 @@
 	align-items: center;
 }
 
-.header button
+button
 {
 	border-radius: 5px;
 	color: white;
 	border: 0px;
 	padding: 10px 20px;
 	background-color: #CD1F25;
+}
+
+.header button
+{
 	margin: 0px 5px;
+}
+
+.header button:hover
+{
+	cursor: pointer;
 }
 
 .nav
@@ -42,21 +51,25 @@
 	border-radius: 5px;
 }
 
-.nav ul
+.nav li.active
 {
-	display: flex;
+	background-color: #CD1F25;
 }
 
 .nav ul > li 
 {
 	list-style-type: none;
-	padding: 10px 15px;
 	position: relative;
+	text-transform: uppercase;
+	font-size: 14px;
 }
 
-.nav ul > li:first-child
+.nav ul > li > a
 {
-	border-radius: 5px;
+	padding: 15px 20px;
+	display: block;
+	text-decoration: none;
+	color: inherit;
 }
 
 .nav ul > li:hover
@@ -65,7 +78,29 @@
 	cursor: pointer;
 }
 
-.nav ul > li > ul
+.nav ul > li:hover > ul
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.nav > ul
+{
+	display: flex;
+}
+
+.nav > ul > li
+{
+	border-right: 1px solid #444;
+	box-shadow: 1px 0px 0px black;
+}
+
+.nav > ul > li:first-child
+{
+	border-radius: 5px 0px 0px 5px;
+}
+
+.nav > ul > li > ul
 {
 	display: none;
 	background-color: #383838;
@@ -75,10 +110,177 @@
 	max-width: none;
 }
 
-.nav ul > li:hover > ul
+.content
+{
+	max-width: none;
+	height: 500px;
+	display: flex;
+	overflow: hidden;
+	justify-content: center;
+}
+
+.content div:first-child
+{	
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.content > div > .item-box
+{
+	min-height: 500px;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	margin-right: 20px;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+}
+
+.content > div > .item-box:first-child
+{
+	animation-name: first-slider;
+}
+
+.content > div > .item-box:last-child
+{
+	animation-name: second-slider;
+}
+
+@keyframes first-slider
+{
+	0% 
+	{ 
+		transform:none;
+		opacity: 1;
+	}
+	33.33333% 
+	{ 
+		transform:none;
+		opacity: 1;
+	}
+	49.9999% 
+	{ 
+		transform:translateY(-100%);
+		opacity: 0;
+	}
+	50% 
+	{ 
+		transform:translateY(100%);
+		opacity: 1;
+	}
+	83.33333% 
+	{ 
+		transform:translateY(100%);
+	}
+	100% 
+	{ 
+		transform:none;
+	}
+}
+
+@keyframes second-slider
+{
+	0% 
+	{ 
+		transform:none;
+	}
+	33.33333% 
+	{ 
+		transform:none;
+	}
+	50% 
+	{ 
+		transform:translateY(-100%);
+		opacity: 1;
+	}
+	83.33333% 
+	{
+		transform:translateY(-100%);
+		opacity: 1;
+	}
+	99.999999% 
+	{ 
+		transform:translateY(-200%);
+		opacity: 0;
+	}
+	100% { transform:none; }
+}
+
+.content > div > .item-box img
+{
+	height: 350px;
+}
+
+.content > div > .item-box > label
+{
+	width: 350px;
+	text-align: center;
+	color: #CD1F25;
+	font-weight: 900;
+	padding: 10px 0px;
+}
+
+.content .promotion-box
+{
+	margin-left: 20px;
+	align-items: flex-start;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.content .promotion-box .sale-text
+{
+	color: #CD1F25;
+	font-size: 72pt;
+	font-weight: 900;
+	transform: translateY(-50px);
+}
+
+.content .promotion-box .discount-text
+{
+	font-weight: 900;
+	font-size: 14pt;
+	transform: translateY(-50px);
+}
+
+.content .promotion-box button
+{
+	transform: translateY(-30px);
+}
+
+.footer
 {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	background-color: #383838;
+	padding: 20px;
+	color: white;
+}
+
+.footer > div
+{
+	text-align: center;
+}
+
+.footer > div > img
+{
+	width: 12.5%;
+}
+
+.footer > div > img:hover
+{
+	cursor: pointer;
+}
+
+.footer > label
+{
+	margin-top: 10px;
 }
 
 @font-face
@@ -97,9 +299,65 @@
 		flex-direction: column;
 	}
 
+	.header .logo-image
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 	.header .auth-group-button
 	{
-		margin-top: 40px;
+		margin-top: 20px;
 		justify-content: center;
+	}
+
+	.content
+	{
+		flex-direction: column;
+		height: 350px;
+	}
+
+	.content > div > .item-box img
+	{
+		max-height: 150px;	
+	}
+
+	.content > div:first-child
+	{
+		overflow: hidden;
+	}
+
+	.content > div > .item-box
+	{
+		align-items: center;
+		min-height: 100%;
+		margin-right: 0px;
+	}
+
+	.content .promotion-box
+	{
+		max-height: 100px;
+		align-items: center;
+		flex-direction: row;
+		margin-left: 0px;
+	}
+
+	.content .promotion-box .sale-text
+	{
+		font-size: 42px;
+		margin-right: 5%;
+		transform: none;
+	}
+
+	.content .promotion-box .discount-text
+	{
+		margin-right: 5%;
+		transform: none;
+	}
+
+	.content .promotion-box button
+	{
+		transform: none;
 	}
 }

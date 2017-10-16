@@ -3,16 +3,42 @@
 <head>
 	<title>Nano Electronic</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8" name="active-page" content="home">
 	<script type="text/javascript" src="js/index.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="icon" type="img/jpg" href="images/favicon.jpg">
 </head>
 
 <body>
 	<header class="header"></header>
+	
 	<nav class="nav"></nav>
+
+	<content class="content">
+		<div>
+			<div class="item-box">
+				<img src="images/slide-2-image.jpg">
+				<label>SMART PHONE</label>
+			</div>
+
+			<div class="item-box">
+				<img src="images/slide-3-image.jpg">
+				<label>SMART TV</label>
+			</div>
+		</div>
+
+		<div class="promotion-box">
+			<label class="sale-text">SALE</label>
+			<label class="discount-text">Diskon 30%</label>
+			<button>Shop Now</button>
+		</div>
+	</content>
+	
+	<footer class="footer"></footer>
 </body>
 
 <script type="text/javascript">
 	window.onload = loadComponent();
+	activePage();
 </script>
 </html>
