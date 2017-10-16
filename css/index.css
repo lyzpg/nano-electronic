@@ -64,17 +64,17 @@ button:hover
 	border-radius: 5px;
 }
 
-.nav li.active
-{
-	background-color: #CD1F25;
-}
-
 .nav ul > li 
 {
 	list-style-type: none;
 	position: relative;
 	text-transform: uppercase;
 	font-size: 14px;
+}
+
+.nav ul li.active
+{
+	background-color: #CD1F25;
 }
 
 .nav ul > li > a
@@ -91,7 +91,18 @@ button:hover
 	cursor: pointer;
 }
 
-.nav ul > li:hover > ul
+.nav > ul > li > ul
+{
+	display: none;
+	background-color: #383838;
+	position: absolute;
+	z-index:99;
+	left: 0px;
+	top: 100%;
+	max-width: none;
+}
+
+.nav > ul > li:hover > ul
 {
 	display: flex;
 	flex-direction: column;
@@ -111,16 +122,6 @@ button:hover
 .nav > ul > li:first-child
 {
 	border-radius: 5px 0px 0px 5px;
-}
-
-.nav > ul > li > ul
-{
-	display: none;
-	background-color: #383838;
-	position: absolute;
-	left: 0px;
-	top: 100%;
-	max-width: none;
 }
 
 .content
