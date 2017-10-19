@@ -191,7 +191,7 @@ function validateRegister()
 			{
 				var pattern = /(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)/;
 
-				if (inputs[i].value.length < 5)
+				if (inputs[i].value.length < 6)
 				{
 					inputTitle[i].innerHTML = inputs[i].getAttribute("placeholder") + " must contain at least 6 characters!";
 					inputTitle[i].style.color = "#A94442";
