@@ -38,6 +38,11 @@
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);;
 }
 
+/* Limit the width of images inside product-detail item to make them all the same size */
+.product-detail > img {
+  width: 75%;
+}
+
 .product-detail:first-child
 {
 	margin-left: 0%;
