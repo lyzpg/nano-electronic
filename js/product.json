@@ -1,5 +1,5 @@
 {
-	"Computer":
+	"computer":
 	{
 		"description": "Computer technology is constantly changing and top continually launching new computer models. Nano Electronic is here to assist you to choose the right computer that best fits your needs and budget.",
 		"items":
@@ -18,7 +18,7 @@
 			}
 		}
 	},
-	"Laptop":
+	"laptop":
 	{
 		"description": "Laptop technology is constantly changing and top continually launching new laptop models. Nano Electronic is here to assist you to choose the right computer that best fits your needs and budget.",
 		"items":
@@ -31,7 +31,7 @@
 			}
 		}
 	},
-	"SmartPhone":
+	"smartphone":
 	{
 		"description": "Smartphone technology is constantly changing and top continually launching new smartphone models. Nano Electronic is here to assist you to choose the right computer that best fits your needs and budget.",
 		"items":
