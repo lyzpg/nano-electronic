@@ -5,6 +5,66 @@ function loadComponent()
 	loadHeader();
 	loadNavbar();
 	loadFooter();
+
+	var pattern = /=+[\w\W]+/;
+	if (pattern.test(location.href))
+		loadProduct(pattern);
+}
+
+function loadProduct(pattern)
+{
+	var urlParam = location.href.match(pattern)[0];
+	var category = urlParam.substr(1, urlParam.length);
+
+	fetch("js/product.json")
+		.then(data => data.json())
+		.then(data =>
+		{
+			switch (category)
+			{
+				case "all":
+					loadAllProduct(data);
+					break;
+				case "computer":
+					break;
+				case "laptop":
+					break;
+				case "smartphone":
+					break;
+			}
+
+		});
+}
+
+function loadAllProduct(product)
+{
+	var categoryTitle = document.querySelectorAll(".category-desc > .product-category-title")[0];
+	var categoryDescription = document.querySelectorAll(".category-desc > .product-category-description")[0];
+
+	categoryTitle.innerHTML = "All Product"
+	categoryDescription.innerHTML = "Technology is constantly changing and top continually launching new models. Nano Electronic is here to assist you to choose the right computer that best fits your needs and budget.";
+
+	fetch("master_product.html")
+			.then(data => data.text())
+			.then(data =>
+			{
+				for (var category in product)
+				{
+					for (var i = 0; i < Object.keys(product[category]["items"]).length; i++)
+					{
+						var tempDiv = document.createElement("div");
+						tempDiv.className = "product-detail";
+						tempDiv.innerHTML = data;
+
+						var item = product[category]["items"][i];
+						tempDiv.children[0].src = item["url"];
+						tempDiv.children[1].innerHTML = item["product-name"]
+						tempDiv.children[2].innerHTML = item["product-price"]
+
+						document.querySelectorAll(".product-box")[0].appendChild(tempDiv);
+					}	
+				}
+			});
 }
 
 function loadHeader()

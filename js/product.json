@@ -1,0 +1,47 @@
+{
+	"Computer":
+	{
+		"description": "Computer technology is constantly changing and top continually launching new computer models. Nano Electronic is here to assist you to choose the right computer that best fits your needs and budget.",
+		"items":
+		{
+			"0":
+			{
+				"url": "images/Computer/1.jpg",
+				"product-name": "Dell S2317HJ",
+				"product-price": "320.87"
+			},
+			"1":
+			{
+				"url": "images/Computer/2.jpg",
+				"product-name": "HP Pavillion",
+				"product-price": "620.87"
+			}
+		}
+	},
+	"Laptop":
+	{
+		"description": "Laptop technology is constantly changing and top continually launching new laptop models. Nano Electronic is here to assist you to choose the right computer that best fits your needs and budget.",
+		"items":
+		{
+			"0":
+			{
+				"url": "images/Laptop/1.jpg",
+				"product-name": "HP R204TU",
+				"product-price": "100.17"
+			}
+		}
+	},
+	"SmartPhone":
+	{
+		"description": "Smartphone technology is constantly changing and top continually launching new smartphone models. Nano Electronic is here to assist you to choose the right computer that best fits your needs and budget.",
+		"items":
+		{
+			"0":
+			{
+				"url": "images/SmartPhone/1.jpg",
+				"product-name": "Xiamo Redmi 4",
+				"product-price": "50.71"
+			}
+		}
+	}
+}

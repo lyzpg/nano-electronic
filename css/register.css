@@ -30,10 +30,9 @@
 }
 
 /* First Child Gak Jalan */
-h4:first-child
+.main-container > h4:first-of-type
 {
 	margin-top: 0px;
-	background-color: yellow;
 }
 
 .main-container > input
@@ -44,19 +43,19 @@ h4:first-child
 	padding: 6px 6px;
 }
 
-.gender-radio-group > input
+.gender-radio-group > input:nth-of-type(2)
 {
-	background-color: yellow;
+	margin-left: 15px;
 }
 
 .gender-radio-group label
 {
 	cursor: pointer;
+	margin-left: 5px;
 }
 
-.main-container > button
+.main-container > .button-wrapper
 {
-	max-width: none;
 	margin-top: 20px;
 }
 
